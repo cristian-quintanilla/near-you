@@ -73,7 +73,7 @@ function searchPlaces(query, near) {
 			const totalVenues = result.response.venues.length;
 
 			if (totalVenues === 0){
-				showAlert("Intenta con una búsqueda singular. Ejemplo: Restaurante, Cine, Café.");
+				showAlert("Intenta con una búsqueda en singular o con otro lugar.");
 				document.querySelector(".sk-cube-grid").remove();
 				return;
 			}
