@@ -50,18 +50,19 @@ function showAlert(message) {
 }
 
 function searchPlaces(query, near) {
-	const date = new Date();
-	let v;
+	const version = '20221231';
 	const client_id = "HK00JYATOGWSIKR3EHCY4FWEO2FPAEI3QYDEITXLH3L224RI";
 	const client_secret = "QGVCTDQL1D5Q5CBZEZ0ELVMUOTTAZABP1NYTCQCVMQS4AVGE";
 
+	/*
 	if (date.getMonth() + 1 < 10) {
 		v = date.getFullYear() + "0" + (date.getMonth() + 1).toString() + date.getDate();
 	} else {
 		v = date.getFullYear() + (date.getMonth() + 1).toString() + date.getDate();
 	}
+	*/
 
-	const url = `https://api.foursquare.com/v2/venues/search?near=${near}&query=${query}&client_id=${client_id}&client_secret=${client_secret}&v=${v}`;
+	const url = `https://api.foursquare.com/v2/venues/search?near=${near}&query=${query}&client_id=${client_id}&client_secret=${client_secret}&v=${version}`;
 
 	/* SHOW AN SPINNER */
 	spinner();
