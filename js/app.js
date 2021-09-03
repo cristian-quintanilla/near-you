@@ -109,8 +109,8 @@ function showPlaces(venues, geocode){
 		const suffix = categories[0]?.icon?.suffix;
 		let category = categories[0]?.name;
 		const url = dd2dms( lat.toString(), lng.toString() );
-		let fullImageUrl = '../img/map.png';
-		if ( prefix?.split('/')[5] !== undefined &&  suffix !== undefined){
+		let fullImageUrl = './img/map.png';
+		if ( prefix?.split('/')[5] !== undefined && suffix !== undefined){
 			// fullImageUrl = imageUrl + prefix?.split('/')[5] + "/default_64" + suffix;
 			fullImageUrl = imageUrl + prefix?.slice(39, -1) + "_64" + suffix;
 		}
@@ -143,7 +143,6 @@ function showPlaces(venues, geocode){
 			<!-- END Article -->
 	</div>
 		`;
-
 		
 		results.appendChild(flexDiv);
 	});
